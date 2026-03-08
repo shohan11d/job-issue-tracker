@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+   
+  </head>
+  <body>
+    <!-- Login page -->
+    <div
+      class="container mx-auto p-4 w-120 my-50 mx-auto text-center bg-white py-20 px-10"
+    >
+
+      <div class="rounded-full h-30 w-30 grid place-items-center mx-auto">
+        <i class="fa-brands fa-github text-8xl"></i>
+      </div>
+      <h1 class="text-2xl font-bold">GitHub Issue Tracker</h1>
+      <p>Sign in to manage your issues</p>
+
+      <div class="flex flex-col gap-2 mt-5">
+        <label class="text-left" for="username">GitHub Username</label>
+        <input
+          type="text"
+          id="username"
+          placeholder="Enter your GitHub username"
+          class="border p-2"
+        />
+      </div>
+      <div class="flex flex-col gap-2 mt-4">
+        <label class="text-left" for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter your password"
+          class="border p-2"
+        />
+      </div>
+      <button onclick="Login()" id="loginBtn"
+        class="bg-blue-500 cursor-pointer text-white w-full mt-4 px-4 py-2 rounded"
+      >
+        Sign In
+      </button>
+    </div>
+    <!-- All Tabs -->
+   
+    <section class="hidden">
+      <div class="flex justify-between items-center px-[5%] py-4 bg-white ">
+        <div>
+          <i class="fa-brands fa-github text-4xl"></i>
+          <span>GitHub Issues Tracker</span>
+        </div>
+        <div>
+          <input
+            type="search"
+            placeholder="Search issues..."
+            class="border p-2"
+            id="searchInput"
+          />
+          <button class="bg-blue-500 text-white px-4 py-2 rounded">
+            new Issuse <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+      </div>
+      <div class="bg-white py-2 container mx-auto space-x-2 text-gray-700">
+        <button class="border border-blue-500 text-black px-4 py-2 rounded cursor-pointer" id="allBtn">All</button>
+        <button class="border border-gray-300 text-black px-4 py-2 rounded cursor-pointer" id="openBtn">Open</button>
+        <button class="border border-gray-300 text-black px-4 py-2 rounded cursor-pointer" id="closedBtn">Closed</button>
+      </div>
+      <div class="container mx-auto">
+        <div id="issuesContainer" class="grid md:grid-cols-2 lg:grid-cols-4 gap-10"></div>
+      </div>
+    </section>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>

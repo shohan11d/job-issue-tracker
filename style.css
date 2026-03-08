@@ -1,0 +1,29 @@
+body{
+    background-color: #F8FAFC;
+}
+
+.card {
+  padding: 16px;
+  margin: 10px 0;
+  border-radius: 8px;
+  color: black;
+  background-color: white;
+  font-family: sans-serif;
+}
+
+/* Open issues */
+.open {
+  border-top: 4px solid #16a34a;
+}
+
+/* Closed issues */
+.closed {
+  border-top: 4px solid purple;
+}
+.card:hover{
+  background-color: #f0f0f0;
+}
+.active{
+    background-color: blue;
+    color: white;
+}
